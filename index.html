@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VideoMagic AI</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#0b1020;color:white}
+header{padding:22px 7%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #26304b}
+.logo{font-size:23px;font-weight:bold;color:#a78bfa}
+nav a{color:#ddd;text-decoration:none;margin-left:15px;font-size:14px}
+main{max-width:850px;margin:55px auto;padding:20px;text-align:center}
+h1{font-size:38px;margin-bottom:12px}
+h1 span{color:#a78bfa}
+.subtitle{color:#b8c1d9;line-height:1.6}
+.panel{background:#151d33;border:1px solid #303b5a;border-radius:18px;padding:24px;margin-top:35px;text-align:left}
+label{display:block;margin:18px 0 9px;font-weight:bold}
+textarea,select{width:100%;padding:14px;border-radius:10px;border:1px solid #3b4665;background:#0c1428;color:white;font-size:15px}
+textarea{height:115px;resize:vertical}
+button{width:100%;padding:15px;border:0;border-radius:10px;background:#8b5cf6;color:white;font-size:16px;font-weight:bold;margin-top:20px}
+button:active{opacity:.8}
+.modes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:15px}
+.mode{background:#202a45;padding:14px;border-radius:10px;text-align:center;color:#ddd}
+.note{font-size:12px;color:#9eabc8;text-align:center;margin-top:15px}
+footer{text-align:center;color:#8994ad;padding:30px;font-size:13px}
+@media(max-width:500px){h1{font-size:30px}nav a{margin-left:7px;font-size:12px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">✨ VideoMagic AI</div>
+<nav><a href="#">Accueil</a><a href="#create">Créer</a></nav>
+</header>
+<main>
+<h1>Transforme tes idées en <span>vidéos AI</span></h1>
+<p class="subtitle">Create amazing videos in seconds with the power of AI.<br>Crée de belles vidéos grâce à l'intelligence artificielle.</p>
+
+<div class="panel" id="create">
+<h2>🎬 Create your video</h2>
+<label for="prompt">Describe your video / Décris ta vidéo</label>
+<textarea id="prompt" placeholder="Exemple : A cute baby elephant playing in a magical forest..."></textarea>
+
+<label for="style">Choose your video style / Choisis le style</label>
+<select id="style">
+<option>Realistic video</option>
+<option>3D Cartoon</option>
+<option>AI Talking Video</option>
+<option>Image to Video</option>
+</select>
+
+<label for="duration">Video duration / Durée</label>
+<select id="duration">
+<option>10 seconds</option>
+<option>15 seconds</option>
+</select>
+
+<button onclick="createVideo()">✨ Generate my video</button>
+<p class="note" id="message">Your AI video studio starts here. / Ton studio vidéo commence ici.</p>
+</div>
+
+<div class="modes">
+<div class="mode">✍️ Text to Video</div>
+<div class="mode">🖼️ Image to Video</div>
+<div class="mode">🐻 3D Cartoon</div>
+<div class="mode">🎤 Talking Videos</div>
+</div>
+</main>
+<footer>© 2026 VideoMagic AI — Create without limits.</footer>
+<script>
+function createVideo(){
+const prompt=document.getElementById("prompt").value.trim();
+const message=document.getElementById("message");
+if(!prompt){
+message.textContent="Please describe your video first. / Décris d'abord ta vidéo.";
+return;
+}
+message.textContent="Your idea is ready! Real AI video generation will be connected in the next development stage. / Ton idée est prête !";
+}
+</script>
+</body>
+</html>
